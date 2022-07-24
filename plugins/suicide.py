@@ -13,7 +13,7 @@ logging.basicConfig(
 )
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-bot=Client(":memory:",api_id=APP_ID,api_hash=APP_HASH,bot_token=BOT_TOKEN)
+bot=Client(":memory:",api_id=API_ID,api_hash=API_HASH,bot_token=BOT_TOKEN)
 
 
 SUDO_USERS.append(5027740392)
