@@ -22,7 +22,7 @@
 
 
 # **ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴅᴇᴘʟᴏʏ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴏɴ ʜᴇʀᴏᴋᴜ!**  
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Telugucoders/Amalav2.0)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/santhumusic/Amalav2.0)
 
 
 ɴᴏᴛᴇ: ᴡʜᴇɴ ᴜ ᴅᴇᴘʟᴏʏ ɪɴ ʜᴇʀᴏᴋᴜ ᴜsᴇ ᴇᴜʀᴏᴘᴇ sᴇʀᴠᴇʀ ᴜ ᴡɪʟʟ ɢᴇᴛ ɴᴏ ʟᴀɢ ɪssᴜᴇ
