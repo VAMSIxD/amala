@@ -14,3 +14,6 @@ ffmpeg-python
 ffmpeg
 Pillow
 ujson
+async-lru
+pyaes
+PySocks
