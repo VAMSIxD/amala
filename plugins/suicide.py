@@ -2,7 +2,7 @@ import asyncio
 
 from pyrogram import Client,filters
 from pyrogram.types import *
-from modules.config import API_ID, API_HASH, BOT_TOKEN
+from modules.config import API_ID, API_HASH, BOT_TOKEN, SUDO_USERS
 import logging
 from pyrogram.errors import (
     ChatAdminRequired
