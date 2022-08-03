@@ -20,9 +20,9 @@ async def bcast(_, message: Message):
             await wtf.edit("**ᴘʟᴇᴀsᴇ ʀᴇᴘʟʏ ʙʀᴏᴀᴅᴄᴀsᴛ ᴍᴇssᴀɢᴇ 😒**")
             return
         lmao = message.reply_to_message.text
-        async for dialog in aditya.iter_dialogs():
+        async for dialog in client.iter_dialogs():
             try:
-                await aditya.send_message(dialog.chat.id, lmao)
+                await client.send_message(dialog.chat.id, lmao)
                 sent = sent+1
                 await wtf.edit(f"**ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ** \n\n**sᴇɴᴛ ɢʀᴏᴜᴘs:** `{sent}` Ƈɦɑᴛs \n**ғɑɩɭɘɗ ɪŋ:** {failed} ᴄʜᴀᴛs")
                 await asyncio.sleep(3)
