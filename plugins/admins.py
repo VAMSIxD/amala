@@ -10,12 +10,7 @@ from modules.helpers.command import commandpro as command
 from modules.helpers.decorators import authorized_users_only
 from modules.clientbot.utils import skip_current_song, skip_item
 from config import BOT_USERNAME, GROUP, IMG_5, NETWORK
-from pyrogram.types import (
-    CallbackQuery,
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    Message,
-)
+from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 
 @Client.on_message(command(["/reload", f"/reload@{BOT_USERNAME}"]) & other_filters)
