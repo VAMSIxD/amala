@@ -1,27 +1,17 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
+#Thank to @teamyukki
 
 from pyrogram import filters
 from pyrogram.types import Message
-
-import config
-from strings import get_command
+from modules.config import PRIVATE_BOT_MODE
 from modules.clientbot import bot
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils.database import (add_private_chat,
+from modules.misc import SUDOERS
+from modules.database import (add_private_chat,
                                        get_private_served_chats,
                                        is_served_private_chat,
                                        remove_private_chat)
 
 
-@bot.on_message(filters.command(AUTHORIZE_COMMAND) & SUDOERS)
-@language
+@bot.on_message(filters.command("authorize") & SUDOERS)
 async def authorize(client, message: Message, _):
     if config.PRIVATE_BOT_MODE != str(True):
         return await message.reply_text(_["pbot_12"])
@@ -38,8 +28,7 @@ async def authorize(client, message: Message, _):
         await message.reply_text(_["pbot_5"])
 
 
-@bot.on_message(filters.command(UNAUTHORIZE_COMMAND) & SUDOERS)
-@language
+@bot.on_message(filters.command("unauthorize") & SUDOERS)
 async def unauthorize(client, message: Message, _):
     if config.PRIVATE_BOT_MODE != str(True):
         return await message.reply_text(_["pbot_12"])
@@ -56,7 +45,7 @@ async def unauthorize(client, message: Message, _):
         return await message.reply_text(_["pbot_4"])
 
 
-@bot.on_message(filters.command(AUTHORIZED_COMMAND) & SUDOERS)
+@bot.on_message(filters.command("authorized") & SUDOERS)
 async def authorized(client, message: Message, _):
     if config.PRIVATE_BOT_MODE != str(True):
         return await message.reply_text(_["pbot_12"])
