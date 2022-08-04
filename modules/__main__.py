@@ -4,6 +4,9 @@ from modules.clientbot import call_py, bot, user
 from pyrogram import idle
 from modules.logging import LOGGER
 
+loop = asyncio.get_event_loop()
+
+
 async def start_bot():
     await bot.start()
     print("[INFO]: BOT & UBOT CLIENT STARTED !!")
