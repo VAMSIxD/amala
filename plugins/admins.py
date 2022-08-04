@@ -9,7 +9,7 @@ from modules.helpers.filters import other_filters
 from modules.helpers.command import commandpro as command
 from modules.helpers.decorators import authorized_users_only
 from modules.clientbot.utils import skip_current_song, skip_item
-from modules.config import BOT_USERNAME, GROUP, IMG_5, NETWORK
+from config import BOT_USERNAME, GROUP, IMG_5, NETWORK
 from pyrogram.types import (
     CallbackQuery,
     InlineKeyboardButton,
