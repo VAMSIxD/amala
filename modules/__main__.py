@@ -15,5 +15,5 @@ async def start_bot():
     await bot.stop()
 
 if __name__ == "__main__":
-    loop.run_until_complete(init())
+    loop.run_until_complete(start_bot())
     LOGGER("modules").info("Stopping Telugu coders Music Bot! GoodBye")
