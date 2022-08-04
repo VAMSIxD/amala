@@ -9,7 +9,7 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputStream
 from pytgcalls.types.input_stream import InputAudioStream
 from modules.clientbot import clientbot
-from modules.config import GROUP, NETWORK, BOT_USERNAME
+from config import GROUP, NETWORK, BOT_USERNAME
 
 ## don't change any value in this repo if you change the value bot will crash your heroku accounts. 
 
