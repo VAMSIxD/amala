@@ -37,6 +37,16 @@
         "NETWORK": {
             "description": "put your channel username without@ EX: telugucoders",
             "required": true
+        },
+        "PRIVATE_BOT_MODE": {
+            "description": "if you want false then put false not important",
+            "value": "True",
+            "required": false
+        },
+        "MONGO_DB_URI": {
+            "description": "Get a mongodb url from https://cloud.mongodb.com . You can leave it blank if you want , bot will use Telugu coders database for you.",
+            "value": "",
+            "required": false
         }
     },
     "buildpacks": [
