@@ -12,7 +12,7 @@ from pyrogram.types import Message
 
 import config
 from strings import get_command
-from YukkiMusic import app
+from modules.clientbot import bot
 from YukkiMusic.misc import SUDOERS
 from YukkiMusic.utils.database import (add_private_chat,
                                        get_private_served_chats,
@@ -20,7 +20,7 @@ from YukkiMusic.utils.database import (add_private_chat,
                                        remove_private_chat)
 
 
-@app.on_message(filters.command(AUTHORIZE_COMMAND) & SUDOERS)
+@bot.on_message(filters.command(AUTHORIZE_COMMAND) & SUDOERS)
 @language
 async def authorize(client, message: Message, _):
     if config.PRIVATE_BOT_MODE != str(True):
@@ -38,7 +38,7 @@ async def authorize(client, message: Message, _):
         await message.reply_text(_["pbot_5"])
 
 
-@app.on_message(filters.command(UNAUTHORIZE_COMMAND) & SUDOERS)
+@bot.on_message(filters.command(UNAUTHORIZE_COMMAND) & SUDOERS)
 @language
 async def unauthorize(client, message: Message, _):
     if config.PRIVATE_BOT_MODE != str(True):
@@ -56,7 +56,7 @@ async def unauthorize(client, message: Message, _):
         return await message.reply_text(_["pbot_4"])
 
 
-@app.on_message(filters.command(AUTHORIZED_COMMAND) & SUDOERS)
+@bot.on_message(filters.command(AUTHORIZED_COMMAND) & SUDOERS)
 async def authorized(client, message: Message, _):
     if config.PRIVATE_BOT_MODE != str(True):
         return await message.reply_text(_["pbot_12"])
