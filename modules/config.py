@@ -23,9 +23,10 @@ SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5589457533 5564501117").split()
 NETWORK = getenv("NETWORK")
 GROUP = getenv("GROUP")
 
-##•••••••••••••••••••••••• Mongodb Url Stuff •••••••••••••••••••••••
+##•••••••••••••••••••••••• Mongodb Url & Logging Stuff •••••••••••••••••••••••
 
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+LOG_FILE_NAME = "amalasisterobotlogs.txt"
 
 #************************* Image Stuff 💕 **************************
 
