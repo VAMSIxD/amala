@@ -17,3 +17,4 @@ ujson
 async-lru
 pyaes
 PySocks
+motor
