@@ -5,22 +5,22 @@ from motor.motor_asyncio import AsyncIOMotorClient as _mongo_client_
 from pymongo import MongoClient
 from pyrogram import Client
 
-from modules.config import MONGO_DB_URI
+from modules.config import MONGO_DB_URI, BOT_TOKEN, API_ID, API_HASH
 
 from ..logging import LOGGER
 
 TEMP_MONGODB = "mongodb+srv://Mrperfect1234:mrperfect2222@mrperfect.u31bh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 
-if modules.config.MONGO_DB_URI is None:
+if MONGO_DB_URI is None:
     LOGGER(__name__).warning(
         "No MONGO DB URL found.. Your Bot will work on Telugu Coders Database"
     )
     temp_client = Client(
         "Telugucoders",
-        bot_token=modules.config.BOT_TOKEN,
-        api_id=config.API_ID,
-        api_hash=config.API_HASH,
+        bot_token=BOT_TOKEN,
+        api_id=API_ID,
+        api_hash=API_HASH,
     )
     temp_client.start()
     info = temp_client.get_me()
@@ -31,7 +31,7 @@ if modules.config.MONGO_DB_URI is None:
     mongodb = _mongo_async_[username]
     pymongodb = _mongo_sync_[username]
 else:
-    _mongo_async_ = _mongo_client_(modules.config.MONGO_DB_URI)
-    _mongo_sync_ = MongoClient(modules.config.MONGO_DB_URI)
+    _mongo_async_ = _mongo_client_(MONGO_DB_URI)
+    _mongo_sync_ = MongoClient(MONGO_DB_URI)
     mongodb = _mongo_async_.Telugucoders
     pymongodb = _mongo_sync_.Telugucoders
