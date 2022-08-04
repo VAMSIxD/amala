@@ -1,7 +1,7 @@
 import asyncio
 from pytgcalls import idle
 from modules.clientbot import call_py, bot, user
-
+from pyrogram import idle
 
 async def start_bot():
     await bot.start()
