@@ -2,7 +2,7 @@ import asyncio
 from pytgcalls import idle
 from modules.clientbot import call_py, bot, user
 from pyrogram import idle
-from modules import LOGGER
+from modules.logging import LOGGER
 
 async def start_bot():
     await bot.start()
