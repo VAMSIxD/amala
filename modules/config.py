@@ -17,6 +17,13 @@ STRING_SESSION = getenv("STRING_SESSION")
 BOT_USERNAME = getenv("BOT_USERNAME")
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5589457533 5564501117").split()))
+OWNER_ID = list(
+    map(int, getenv("OWNER_ID", "5589457533").split())
+)  # Input type must be interger
+
+#°°°°°°°°°°°°°°°°°°°°°°°° Private Mode 💕 °°°°°°°°°°°°°°°°°°°°°°°°°°
+
+PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
 
 #________________________ Updates 🍃 _______________________________
 
