@@ -14,7 +14,7 @@ from modules.database import (add_private_chat,
 
 @bot.on_message(filters.command("authorize") & SUDOERS)
 @authorized_users_only
-async def authorize(client, message: Message, _):
+async def authorize(client: Client, message: Message):
     if config.PRIVATE_BOT_MODE != str(True):
         return await message.reply_text("Private Bot Mode is disabled.\n\nTo use your bot as private bot make sure to set **PRIVATE_BOT_MODE** = **True**")
     if len(message.command) != 2:
@@ -32,7 +32,7 @@ async def authorize(client, message: Message, _):
 
 @bot.on_message(filters.command("unauthorize") & SUDOERS)
 @authorized_users_only
-async def unauthorize(client, message: Message, _):
+async def unauthorize(client: Client, message: Message):
     if config.PRIVATE_BOT_MODE != str(True):
         return await message.reply_text("Private Bot Mode is disabled.\n\nTo use your bot as private bot make sure to set **PRIVATE_BOT_MODE** = **True**")
     if len(message.command) != 2:
@@ -50,7 +50,7 @@ async def unauthorize(client, message: Message, _):
 
 @bot.on_message(filters.command("authorized") & SUDOERS)
 @authorized_users_only
-async def authorized(client, message: Message, _):
+async def authorized(client: Client, message: Message):
     if config.PRIVATE_BOT_MODE != str(True):
         return await message.reply_text("ᴘʀɪᴠᴀᴛᴇ ʙᴏᴛ ᴍᴏᴅᴇ ɪs ᴅɪsᴀʙʟᴇᴅ.\n\nᴛᴏ ᴜsᴇ ʏᴏᴜʀ ʙᴏᴛ ᴀs ᴘʀɪᴠᴀᴛᴇ ʙᴏᴛ ᴍᴀᴋᴇ sᴜʀᴇ ᴛᴏ sᴇᴛ **PRIVATE_BOT_MODE** = **True**")
     m = await message.reply_text("ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ.... ғᴇᴛᴄʜɪɴɢ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴄʜᴀᴛs.")
