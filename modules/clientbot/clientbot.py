@@ -1,7 +1,7 @@
 from pyrogram import idle
 from pyrogram import Client as Bot
 from pyrogram import Client
-from modules.config import API_ID, API_HASH, BOT_TOKEN, STRING_SESSION
+from config import API_ID, API_HASH, BOT_TOKEN, STRING_SESSION
 from pytgcalls import PyTgCalls
    
 bot = Bot(
