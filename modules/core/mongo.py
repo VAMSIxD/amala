@@ -5,7 +5,7 @@ from motor.motor_asyncio import AsyncIOMotorClient as _mongo_client_
 from pymongo import MongoClient
 from pyrogram import Client
 
-from config import config *
+from config import *
 
 from ..logging import LOGGER
 
