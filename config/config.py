@@ -21,7 +21,7 @@ OWNER_ID = list(
     map(int, getenv("OWNER_ID", "5589457533").split())
 )  # Input type must be interger
 
-•••••••••••••••••••••••• Mongodb Url Stuff •••••••••••••••••••••••
+#•••••••••••••••••••••••• Mongodb Url Stuff •••••••••••••••••••••••
 
 MONGO_DB_URI = getenv("MONGO_DB_URI")
 
