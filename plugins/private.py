@@ -5,6 +5,7 @@ from pyrogram.types import Message
 from modules.helpers.decorators import authorized_users_only
 from config import PRIVATE_BOT_MODE
 from modules import app
+from modules.helpers.filters import get_command
 from modules.misc import SUDOERS
 from modules.database import (add_private_chat,
                                        get_private_served_chats,
