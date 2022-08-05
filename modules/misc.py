@@ -3,7 +3,7 @@ import time
 
 from pyrogram import filters
 
-from config import PRIVATE_BOT_MODE, OWNER_ID, MONGO_DB_URI
+import config
 from modules.core.mongo import pymongodb
 
 from .logging import LOGGER
