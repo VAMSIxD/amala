@@ -1,10 +1,7 @@
 import asyncio
 from pytgcalls import idle
 from modules.clientbot import call_py, bot, user
-from pyrogram import idle
 from modules.logging import LOGGER
-
-loop = asyncio.get_event_loop()
 
 
 async def start_bot():
@@ -18,6 +15,6 @@ async def start_bot():
     print("[INFO]: STOPPING BOT & USERBOT")
     await bot.stop()
 
-if __name__ == "__main__":
-    loop.run_until_complete(start_bot())
-    LOGGER("modules").info("Stopping Telugu coders Music Bot! GoodBye")
+loop = asyncio.get_event_loop()
+loop.run_until_complete(start_bot())
+
