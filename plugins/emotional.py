@@ -6,7 +6,7 @@ from pyrogram import Client, filters, __version__ as pyrover
 from pytgcalls import (__version__ as pytgver)
 
 from modules import __version__ as ver
-from plugin.alive import __python_version__ as pyver
+from plugins.alive import __python_version__ as pyver
 
 from driver.core import me_bot
 from modules.helpers.filters import command
