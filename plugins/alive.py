@@ -6,9 +6,14 @@ from time import time
 from datetime import datetime
 from modules.helpers.filters import command
 from modules.helpers.command import commandpro
-from pyrogram import Client, filters
+from pyrogram import Client, filters, __version__ as pyrover
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import GROUP, NETWORK, BOT_USERNAME
+from pytgcalls import (__version__ as pytover)
+from modules import __version__
+
+__python_version__ = f"{version_info[0]}.{version_info[1]}.{version_info[2]}"
+
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
