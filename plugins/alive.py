@@ -11,6 +11,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import GROUP, NETWORK, BOT_USERNAME
 from pytgcalls import (__version__ as pytover)
 from modules import __version__
+from sys import version_info
 
 __python_version__ = f"{version_info[0]}.{version_info[1]}.{version_info[2]}"
 
