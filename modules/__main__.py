@@ -1,7 +1,6 @@
 import asyncio
 from pytgcalls import idle
 from modules.clientbot import call_py, bot, user
-from modules.logging import LOGGER
 
 
 async def start_bot():
