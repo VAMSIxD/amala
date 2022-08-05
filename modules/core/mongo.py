@@ -18,9 +18,9 @@ if config.MONGO_DB_URI is None:
     )
     temp_client = Client(
         "Telugucoders",
-        bot_token=BOT_TOKEN,
-        api_id=API_ID,
-        api_hash=API_HASH,
+        bot_token=config.BOT_TOKEN,
+        api_id=config.API_ID,
+        api_hash=config.API_HASH,
     )
     temp_client.start()
     info = temp_client.get_me()
