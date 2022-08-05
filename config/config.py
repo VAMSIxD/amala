@@ -21,6 +21,10 @@ OWNER_ID = list(
     map(int, getenv("OWNER_ID", "5589457533").split())
 )  # Input type must be interger
 
+
+NETWORK = getenv("NETWORK")
+GROUP = getenv("GROUP")
+
 #************************* Image Stuff 💕 **************************
 
 IMG_1 = getenv("IMG_1", "https://telegra.ph/file/d6f92c979ad96b2031cba.png")
