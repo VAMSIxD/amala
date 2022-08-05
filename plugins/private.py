@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 from modules.helpers.decorators import authorized_users_only
 from config import PRIVATE_BOT_MODE
-from modules.clientbot import bot
+from modules import app
 from modules.misc import SUDOERS
 from modules.database import (add_private_chat,
                                        get_private_served_chats,
@@ -12,7 +12,7 @@ from modules.database import (add_private_chat,
                                        remove_private_chat)
 
 
-@bot.on_message(filters.command("authorize") & SUDOERS)
+@app.on_message(filters.command("authorize") & SUDOERS)
 @authorized_users_only
 async def authorize(client: Client, message: Message):
     if config.PRIVATE_BOT_MODE != str(True):
@@ -30,7 +30,7 @@ async def authorize(client: Client, message: Message):
         await message.reply_text("Chat is already in the authorized list")
 
 
-@bot.on_message(filters.command("unauthorize") & SUDOERS)
+@app.on_message(filters.command("unauthorize") & SUDOERS)
 @authorized_users_only
 async def unauthorize(client: Client, message: Message):
     if config.PRIVATE_BOT_MODE != str(True):
@@ -48,7 +48,7 @@ async def unauthorize(client: Client, message: Message):
         return await message.reply_text("ʀᴇᴍᴏᴠᴇᴅ ɢɪᴠᴇɴ ᴄʜᴀᴛ ғʀᴏᴍ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ʟɪsᴛ")
 
 
-@bot.on_message(filters.command("authorized") & SUDOERS)
+@app.on_message(filters.command("authorized") & SUDOERS)
 @authorized_users_only
 async def authorized(client: Client, message: Message):
     if config.PRIVATE_BOT_MODE != str(True):
