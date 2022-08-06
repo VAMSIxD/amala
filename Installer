@@ -1,5 +1,6 @@
 git+https://github.com/TeluguCodersMusic/yt-dlp@telugucoders
 pyrogram==1.4.16
+telethon
 TgCrypto
 py-tgcalls==0.8.6
 python-dotenv
