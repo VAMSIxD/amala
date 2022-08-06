@@ -11,10 +11,11 @@ from telethon.tl.types import ChannelParticipantAdmin
 from telethon.tl.types import ChannelParticipantCreator
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.errors import UserNotParticipantError
-from config import client, spam_chats
+from config import spam_chats
+from modules.clientbot import bot
 import asyncio
 
-@client.on(events.NewMessage(pattern="^@all ?(.*)"))
+@bot.on(events.NewMessage(pattern="^@all ?(.*)"))
 async def all(event):
   chat_id = event.chat_id
   if event.is_private:
@@ -77,7 +78,7 @@ async def all(event):
   except:
     pass
 
-@client.on(events.NewMessage(pattern="^/cancel$"))
+@bot.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel_spam(event):
   if not event.chat_id in spam_chats:
     return await event.respond('__ᴛʜᴇʀᴇ ɪs ɴᴏ ᴘʀᴏᴄᴄᴇss ᴏɴ ɢᴏɪɴɢ...__')
