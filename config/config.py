@@ -21,6 +21,11 @@ OWNER_ID = list(
     map(int, getenv("OWNER_ID", "5589457533").split())
 )  # Input type must be interger
 
+#×××××××××××××××××××××××× Tag All Stuff 😌 ××××××××××××××××××××××××
+
+client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
+spam_chats = []
+
 #•••••••••••••••••••••••• Mongodb Url Stuff •••••••••••••••••••••••
 
 MONGODB_URL = getenv("MONGODB_URL")
