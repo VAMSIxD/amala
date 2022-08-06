@@ -2,7 +2,8 @@ import os
 import aiohttp
 from os import getenv
 from dotenv import load_dotenv
-    
+from telethon import  TelegramClient
+
 load_dotenv()
 que = {}
 admins = {}
