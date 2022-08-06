@@ -2,7 +2,6 @@
 
 """ global banned and un-global banned module """
 
-
 import asyncio
 
 from pyrogram import Client
