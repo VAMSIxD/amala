@@ -24,10 +24,6 @@ OWNER_ID = list(
 
 #×××××××××××××××××××××××× Tag All Stuff 😌 ××××××××××××××××××××××××
 
-APP_ID = int(os.environ.get("APP_ID"))
-API_HASH = os.environ.get("API_HASH")
-TOKEN = os.environ.get("TOKEN")
-client = TelegramClient('client', APP_ID, API_HASH).start(bot_token=TOKEN)
 spam_chats = []
 
 #•••••••••••••••••••••••• Mongodb Url Stuff •••••••••••••••••••••••
