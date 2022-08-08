@@ -37,7 +37,7 @@ async def broadcast_message_nopin(c: Client, message: Message):
         for i in chats:
             try:
                 m = await c.forward_messages(i, y, x)
-                await asyncio.sleep(0.3)
+                await asyncio.sleep(0.1)
                 sent += 1
             except Exception:
                 pass
@@ -57,7 +57,7 @@ async def broadcast_message_nopin(c: Client, message: Message):
     for i in chats:
         try:
             m = await c.send_message(i, text=text)
-            await asyncio.sleep(0.3)
+            await asyncio.sleep(0.1)
             sent += 1
         except Exception:
             pass
