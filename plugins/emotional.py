@@ -144,37 +144,3 @@ async def bot_statistic(c: Client, message: Message):
 ➥ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ** : `{pyrover}`
 ➥ **ʙᴏᴛ ᴠᴇʀsɪᴏɴ** : `{ver}`"""
     await msg.edit(tgm, disable_web_page_preview=True)
-
-
-@Client.on_message(command(["calls", f"calls@{uname}"]) & ~filters.edited)
-@sudo_users_only
-async def active_group_calls(c: Client, message: Message):
-    served_chats = []
-    try:
-        chats = await get_active_chats()
-        for chat in chats:
-            served_chats.append(int(chat["chat_id"]))
-    except Exception as e:
-        await message.reply_text(f"🚫 ᴇʀʀᴏʀ: `{e}`")
-    text = ""
-    j = 0
-    for x in served_chats:
-        try:
-            title = (await c.get_chat(x)).title
-        except BaseException:
-            title = "Private Group"
-        if (await c.get_chat(x)).username:
-            data = (await c.get_chat(x)).username
-            text += (
-                f"**{j + 1}.** [{title}](https://t.me/{data}) [`{x}`]\n"
-            )
-        else:
-            text += f"**{j + 1}.** {title} [`{x}`]\n"
-        j += 1
-    if not text:
-        await message.reply_text("❌ ɴᴏ ᴀᴄᴛɪᴠᴇ ɢʀᴏᴜᴘ ᴄᴀʟʟs")
-    else:
-        await message.reply_text(
-            f"✏️ **ʀᴜɴɴɪɴɢ ɢʀᴏᴜᴘ ᴄᴀʟʟ ʟɪsᴛ:**\n\n{text}\n❖ ᴛʜɪs ɪs ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀʟʟ ᴄᴜʀʀᴇɴᴛ ᴀᴄᴛɪᴠᴇ ɢʀᴏᴜᴘ ᴄᴀʟʟ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ.",
-            disable_web_page_preview=True,
-        )
