@@ -60,6 +60,7 @@ async def global_banned(c: Client, message: Message):
                     pass
             ban_text = f"""
 ➥ **ɴᴇᴡ ɢʟᴏʙᴀʟ ʙᴀɴ ᴏɴ [{BOT_NAME}](https://t.me/{bn})
+
 ➥ **ᴏʀɪɢɪɴ:** {message.chat.title} [`{message.chat.id}`]
 ➥ **sᴜᴅᴏ ᴜsᴇʀ:** {from_user.mention}
 ➥ **ʙᴀɴɴᴇᴅ ᴜsᴇʀ:** {user.mention}
@@ -111,7 +112,8 @@ async def global_banned(c: Client, message: Message):
                 except Exception:
                     pass
             ban_text = f"""
-🚷 **ɴᴇᴡ ɢʟᴏʙᴀʟ ʙᴀɴ ᴏɴ [{BOT_NAME}](https://t.me/{bn})
+➥ **ɴᴇᴡ ɢʟᴏʙᴀʟ ʙᴀɴ ᴏɴ [{BOT_NAME}](https://t.me/{bn})
+
 ➥ **ᴏʀɪɢɪɴ:** {message.chat.title} [`{message.chat.id}`]
 ➥ **sᴜᴅᴏ ᴜsᴇʀ:** {from_user_mention}
 ➥ **ʙᴀɴɴᴇᴅ ᴜsᴇʀ:** {mention}
