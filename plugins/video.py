@@ -147,7 +147,7 @@ async def vplay(c: Client, m: Message):
                 title = songname
                 userid = m.from_user.id
                 thumbnail = f"{IMG_5}"
-                image = await thumb(thumbnail, title, userid)
+                image = await thumb(thumbnail, allow_redirects=True)
                 pos = add_to_queue(chat_id, songname, dl, link, "Video", Q)
                 await loser.delete()
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
@@ -221,7 +221,7 @@ async def vplay(c: Client, m: Message):
                     duration = search[2]
                     thumbnail = search[3]
                     userid = m.from_user.id
-                    image = await thumb(thumbnail, title, userid)
+                    image = await thumb(thumbnail, allow_redirects=True)
                     coders, ytlink = await ytdl(url)
                     if coders == 0:
                         await loser.edit(f"❌ ʏᴛ-ᴅʟ ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ\n\n» `{ytlink}`")
@@ -297,7 +297,7 @@ async def vplay(c: Client, m: Message):
                 duration = search[2]
                 thumbnail = search[3]
                 userid = m.from_user.id
-                image = await thumb(thumbnail, title, userid)
+                image = await thumb(thumbnail, allow_redirects=True)
                 coders, ytlink = await ytdl(url)
                 if coders == 0:
                     await loser.edit(f"❌ ʏᴛ-ᴅʟ ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ\n\n» `{ytlink}`")
