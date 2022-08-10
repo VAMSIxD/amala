@@ -18,7 +18,7 @@ from modules.database.dbchat import get_served_chats, add_served_chat
 from modules.database.dbusers import get_served_users
 from modules.database.dbpunish import get_gbans_count
 from modules.database.dbqueue import get_active_chats
-
+from modules.database.dblockchat import blacklisted_chats
 from config import BOT_USERNAME as uname
 from config import SUDO_USERS
 
