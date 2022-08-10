@@ -19,6 +19,7 @@ from modules.database.dbpunish import get_gbans_count
 from modules.database.dbqueue import get_active_chats
 
 from config import BOT_USERNAME as uname
+from config import SUDO_USERS
 
 chat_watcher_group = 10
 
