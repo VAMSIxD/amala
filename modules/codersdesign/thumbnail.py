@@ -3,6 +3,7 @@ import aiofiles
 import aiohttp
 from PIL import Image, ImageDraw, ImageFont
 
+BOT_NAME = Telugucoders
 
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
@@ -22,8 +23,8 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 await f.close()
 
     image = Image.open(f"./background.png")
-    black = Image.open("etc/black.jpg")
-    img = Image.open("etc/robot.png")
+    black = Image.open("resources/black.jpg")
+    img = Image.open("resources/robot.png")
     image5 = changeImageSize(1280, 720, img)
     image1 = changeImageSize(1280, 720, image)
     image1 = image1.filter(ImageFilter.BoxBlur(10))
@@ -47,10 +48,10 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     image2.paste(image5, mask = image5)
 
     # fonts
-    font1 = ImageFont.truetype(r'etc/robot.otf', 30)
-    font2 = ImageFont.truetype(r'etc/robot.otf', 60)
-    font3 = ImageFont.truetype(r'etc/robot.otf', 49)
-    font4 = ImageFont.truetype(r'etc/Mukta-ExtraBold.ttf', 35)
+    font1 = ImageFont.truetype(r'resources/robot.otf', 30)
+    font2 = ImageFont.truetype(r'resources/robot.otf', 60)
+    font3 = ImageFont.truetype(r'resources/robot.otf', 49)
+    font4 = ImageFont.truetype(r'resources/Mukta-ExtraBold.ttf', 35)
 
     image4 = ImageDraw.Draw(image2)
 
