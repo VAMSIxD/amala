@@ -1,5 +1,5 @@
 from typing import Dict, List, Union
-from modules.database.dblocal import db
+from modules.database import db
 
 usersdb = db.users
 
