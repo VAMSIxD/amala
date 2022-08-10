@@ -37,7 +37,7 @@
 
 
 
-# ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ
+**ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ**
 - [ᴋᴀɴɴᴀ](https://github.com/blackcat097)        **•ᴅᴇᴠ•**
 
 - [sᴀɴᴛʜᴜ](https://github.com/santhumusic)      **•ᴅᴇᴠ•**
