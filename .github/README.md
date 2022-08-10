@@ -19,7 +19,7 @@
 
 
 
-# **ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴅᴇᴘʟᴏʏ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴏɴ ʜᴇʀᴏᴋᴜ!**  
+**ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴅᴇᴘʟᴏʏ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴏɴ ʜᴇʀᴏᴋᴜ!**  
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TeluguCodersMusic/Amalav2.0)
 
 
