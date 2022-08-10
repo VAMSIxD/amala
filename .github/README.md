@@ -2,7 +2,7 @@
 
 ʙᴏᴛ: [ᴀᴍᴀʟᴀ](https://telegram.me/Amalamusicbot)
 
-<p align="center"><a href="https://t.me/teamshadowprojects"><img src="https://telegra.ph/file/5c40c60faa98656741eb3.jpg" width="300"></a></p>
+<p align="center"><a href="https://t.me/teamshadowprojects"><img src="https://te.legra.ph/file/de7b6222b8332e0024583.jpg" width="300"></a></p>
 
  
 
