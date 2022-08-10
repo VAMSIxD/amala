@@ -13,38 +13,63 @@ def changeImageSize(maxWidth, maxHeight, image):
     return newImage
 
 
-async def thumb(thumbnail, title, userid):
+async def generate_cover(requested_by, title, views, duration, thumbnail):
     async with aiohttp.ClientSession() as session:
         async with session.get(thumbnail) as resp:
             if resp.status == 200:
-                f = await aiofiles.open(f"resource/thumb{userid}.png", mode="wb")
+                f = await aiofiles.open("background.png", mode="wb")
                 await f.write(await resp.read())
                 await f.close()
-    image1 = Image.open(f"resource/thumb{userid}.png")
-    image2 = Image.open("resource/telugucodersvplay.png")
-    image3 = changeImageSize(1280, 720, image1)
-    image4 = changeImageSize(1280, 720, image2)
-    image5 = image3.convert("RGBA")
-    image6 = image4.convert("RGBA")
-    Image.alpha_composite(image5, image6).save(f"resource/temp{userid}.png")
-    img = Image.open(f"resource/temp{userid}.png")
-    draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("resource/Roboto-Regular.ttf", 50)
-    font2 = ImageFont.truetype("resource/Roboto-Medium.ttf", 72)
-    draw.text(
-        (25, 615),
-        f"{title[:20]}...",
-        fill="white",
-        font=font2,
-    )
-    draw.text(
-        (27, 543),
-        f"Now Playing",
-        fill="red",
-        font=font,
-    )
-    img.save(f"resource/final{userid}.png")
-    os.remove(f"resource/temp{userid}.png")
-    os.remove(f"resource/thumb{userid}.png")
-    final = f"resource/final{userid}.png"
+
+    image = Image.open(f"./background.png")
+    black = Image.open("etc/black.jpg")
+    img = Image.open("etc/robot.png")
+    image5 = changeImageSize(1280, 720, img)
+    image1 = changeImageSize(1280, 720, image)
+    image1 = image1.filter(ImageFilter.BoxBlur(10))
+    image11 = changeImageSize(1280, 720, image)
+    image1 = image11.filter(ImageFilter.BoxBlur(10))
+    image2 = Image.blend(image1,black,0.6)
+
+    # Cropping circle from thubnail
+    image3 = image11.crop((280,0,1000,720))
+    #lum_img = Image.new('L', [720,720] , 0)
+   # draw = ImageDraw.Draw(lum_img)
+   # draw.pieslice([(0,0), (720,720)], 0, 360, fill = 255, outline = "white")
+   # img_arr =np.array(image3)
+    #lum_img_arr =np.array(lum_img)
+    #final_img_arr = np.dstack((img_arr,lum_img_arr))
+    #image3 = Image.fromarray(final_img_arr)
+    image3 = image3.resize((500,500))
+    
+
+    image2.paste(image3, (100,115))
+    image2.paste(image5, mask = image5)
+
+    # fonts
+    font1 = ImageFont.truetype(r'etc/robot.otf', 30)
+    font2 = ImageFont.truetype(r'etc/robot.otf', 60)
+    font3 = ImageFont.truetype(r'etc/robot.otf', 49)
+    font4 = ImageFont.truetype(r'etc/Mukta-ExtraBold.ttf', 35)
+
+    image4 = ImageDraw.Draw(image2)
+
+    # title
+    title1 = truncate(title)
+    image4.text((670, 280), text=title1[0], fill="white", font = font3, align ="left") 
+    image4.text((670, 332), text=title1[1], fill="white", font = font3, align ="left") 
+
+    # description
+    views = f"Views : {views}"
+    duration = f"Duration : {duration} minutes"
+    channel = f"Request : {BOT_NAME} Bot"
+
+    image4.text((670, 410), text=views, fill="white", font = font4, align ="left") 
+    image4.text((670, 460), text=duration, fill="white", font = font4, align ="left") 
+    image4.text((670, 510), text=channel, fill="white", font = font4, align ="left")
+
+    
+    image2.save(f"final.png")
+    os.remove(f"background.png")
+    final = f"temp.png"
     return final
