@@ -34,20 +34,16 @@
 
 
 
-## **Note 📝 To Repo Editiors**
+## **ɴᴏᴛᴇ 📝 ᴛᴏ ʀᴇᴘᴏ ᴇᴅɪᴛɪᴏʀs**
 
-➠ Don't edit any value on this repo if you edit this repo heroku will ban your repo. 
-That's not Telugucoders error that's your error just fork and deploy safely.. 
+➠ ᴅᴏɴ'ᴛ ᴇᴅɪᴛ ᴀɴʏ ᴠᴀʟᴜᴇ ᴏɴ ᴛʜɪs ʀᴇᴘᴏ ɪғ ʏᴏᴜ ᴇᴅɪᴛ ᴛʜɪs ʀᴇᴘᴏ ʜᴇʀᴏᴋᴜ ᴡɪʟʟ ʙᴀɴ ʏᴏᴜʀ ʀᴇᴘᴏ. 
+ᴛʜᴀᴛ's ɴᴏᴛ ᴛᴇʟᴜɢᴜᴄᴏᴅᴇʀs ᴇʀʀᴏʀ ᴛʜᴀᴛ's ʏᴏᴜʀ ᴇʀʀᴏʀ ᴊᴜsᴛ ғᴏʀᴋ ᴀɴᴅ ᴅᴇᴘʟᴏʏ sᴀғᴇʟʏ.. 
 
-## **Note 📝 To kids**
+## **ɴᴏᴛᴇ 📝 ᴛᴏ ᴋɪᴅs**
 
-➠ Telugucoders ask any type of your card details and your account details beware of scammers any issue of scammers contact @telugucoders Or @telegramsupport
+➠ ᴛᴇʟᴜɢᴜᴄᴏᴅᴇʀs ᴀsᴋ ᴀɴʏ ᴛʏᴘᴇ ᴏғ ʏᴏᴜʀ ᴄᴀʀᴅ ᴅᴇᴛᴀɪʟs ᴀɴᴅ ʏᴏᴜʀ ᴀᴄᴄᴏᴜɴᴛ ᴅᴇᴛᴀɪʟs ʙᴇᴡᴀʀᴇ ᴏғ sᴄᴀᴍᴍᴇʀs ᴀɴʏ ɪssᴜᴇ ᴏғ sᴄᴀᴍᴍᴇʀs ᴄᴏɴᴛᴀᴄᴛ @ᴛᴇʟᴜɢᴜᴄᴏᴅᴇʀs ᴏʀ @ᴛᴇʟᴇɢʀᴀᴍsᴜᴘᴘᴏʀᴛ
 
-➠ If you intrest on donating to telugu coders for paid servers if your child ask your parents and donate me if your 18 above please donate us for servers if your intrest donate 😇.. 
-
-## Thank you❤🌹
-[• Telugu coders](https://t.me/tgshadow_fighters) 
-
+➠ ɪғ ʏᴏᴜ ɪɴᴛʀᴇsᴛ ᴏɴ ᴅᴏɴᴀᴛɪɴɢ ᴛᴏ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ғᴏʀ ᴘᴀɪᴅ sᴇʀᴠᴇʀs ɪғ ʏᴏᴜʀ ᴄʜɪʟᴅ ᴀsᴋ ʏᴏᴜʀ ᴘᴀʀᴇɴᴛs ᴀɴᴅ ᴅᴏɴᴀᴛᴇ ᴍᴇ ɪғ ʏᴏᴜʀ 𝟷𝟾 ᴀʙᴏᴠᴇ ᴘʟᴇᴀsᴇ ᴅᴏɴᴀᴛᴇ ᴜs ғᴏʀ sᴇʀᴠᴇʀs ɪғ ʏᴏᴜʀ ɪɴᴛʀᴇsᴛ ᴅᴏɴᴀᴛᴇ 😇.. 
 
 
 **ꜱᴘᴇᴄɪᴀʟ ᴄʀᴇᴀᴅɪᴛꜱ**
