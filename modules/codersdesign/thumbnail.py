@@ -2,8 +2,9 @@ import os
 import aiofiles
 import aiohttp
 from PIL import Image, ImageDraw, ImageFont
+from modules.clientbot.clientbot import me_bot
 
-BOT_NAME = Telugucoders
+BOT_NAME = me_bot.first_name
 
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
