@@ -5,7 +5,7 @@ from typing import Dict, List, Union
 from modules.database import db
 
 chatsdb = db.chats
-
+blacklist_chatdb = db.blacklistChat
 
 async def is_served_chat(chat_id: int) -> bool:
     chat = await chatsdb.find_one({"chat_id": chat_id})
