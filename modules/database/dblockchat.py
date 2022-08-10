@@ -1,6 +1,6 @@
 from typing import Dict, List, Union
 
-from modules.database.dblocal import db
+from modules.database import db
 
 blacklist_chatdb = db.blacklistChat
 
