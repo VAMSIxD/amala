@@ -14,7 +14,7 @@ from modules.clientbot.clientbot import me_bot
 from modules import app
 from modules.helpers.filters import command
 from modules.helpers.decorators import bot_creator, sudo_users_only
-from modules.database.dbchat import get_served_chats, add_served_chat, blacklisted_chats
+from modules.database.dbchat import get_served_chats, add_served_chat
 from modules.database.dbusers import get_served_users
 from modules.database.dbpunish import get_gbans_count
 from modules.database.dbqueue import get_active_chats
