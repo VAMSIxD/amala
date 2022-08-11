@@ -186,7 +186,6 @@ async def play(c: Client, m: Message):
                 ]
             ]
         )
-                    )
                     await m.reply_photo(
                         photo=image,
                         reply_markup=buttons,
