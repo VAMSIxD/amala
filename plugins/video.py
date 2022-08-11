@@ -3,7 +3,7 @@
 import re
 import asyncio
 
-from config import BOT_USERNAME, IMG_1, IMG_2, IMG_5
+from config import BOT_USERNAME, IMG_1, IMG_2, IMG_5, DURATION_LIMIT
 from modules.codersdesign.thumbnail import generate_cover
 from modules.helpers.filters import command, other_filters
 from modules.clientbot.queues import QUEUE, add_to_queue
