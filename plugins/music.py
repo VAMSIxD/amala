@@ -202,10 +202,12 @@ async def play(c: Client, m: Message):
                     songname = search[0]
                     title = search[0]
                     url = search[1]
-                    duration = search[2]
+                    requested_by = message.from_user.first_name
+                    duration = round(audio.duration / 60)
+                    views = "Locally added"
                     thumbnail = search[3]
                     userid = m.from_user.id
-                    image = await generate_cover(thumbnail, allow_redirects=True)
+                    image = await generate_cover(requested_by, title, views, duration, thumbnail)
                     coders, ytlink = await ytdl(url)
                     if coders == 0:
                         await suhu.edit(f"❌ ʏᴛ-ᴅʟ ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ\n\n» `{ytlink}`")
@@ -277,7 +279,9 @@ async def play(c: Client, m: Message):
                 songname = search[0]
                 title = search[0]
                 url = search[1]
-                duration = search[2]
+                requested_by = message.from_user.first_name
+                duration = round(audio.duration / 60)
+                views = "Locally added"
                 thumbnail = search[3]
                 userid = m.from_user.id
                 image = await generate_cover(thumbnail, allow_redirects=True)
