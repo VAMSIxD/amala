@@ -127,7 +127,7 @@ async def play(c: Client, m: Message):
         if m.reply_to_message
         else None
     )
-    url = get_url(message) 
+    url = get_url(m) 
 
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
@@ -138,13 +138,12 @@ async def play(c: Client, m: Message):
             if chat_id in QUEUE:
                 title = songname
                 userid = m.from_user.id
-                requested_by = message.from_user.first_name
+                requested_by = m.from_user.first_name
                 duration = round(audio.duration / 60)
                 views = "Locally added"
                 thumbnail = f"{IMG_5}"
                 image = await generate_cover(requested_by, title, views, duration, thumbnail)
                 pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-                requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 buttons = InlineKeyboardMarkup(
             [
                 [
@@ -163,7 +162,7 @@ async def play(c: Client, m: Message):
                 try:
                     title = songname
                     userid = m.from_user.id
-                    requested_by = message.from_user.first_name
+                    requested_by = m.from_user.first_name
                     duration = round(audio.duration / 60)
                     views = "Locally added"
                     thumbnail = f"{IMG_5}"
@@ -187,8 +186,6 @@ async def play(c: Client, m: Message):
                 ]
             ]
         )
-                    requester = (
-                        f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                     )
                     await m.reply_photo(
                         photo=image,
@@ -213,7 +210,7 @@ async def play(c: Client, m: Message):
                     songname = search[0]
                     title = results[0]["title"]
                     url = results[0]["url"]
-                    requested_by = message.from_user.first_name
+                    requested_by = m.from_user.first_name
                     duration = results[0]["duration"]
                     views = results[0]["views"]
                     thumbnail = results[0]["thumbnails"][0]
@@ -286,7 +283,7 @@ async def play(c: Client, m: Message):
                 songname = search[0]
                 title = "NaN"
                 url = search[1]
-                requested_by = message.from_user.first_name
+                requested_by = m.from_user.first_name
                 duration = "NaN"
                 views = "NaN"
                 thumbnail = results[0]["thumbnails"][0]
