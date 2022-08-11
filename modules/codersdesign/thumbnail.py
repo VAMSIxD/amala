@@ -51,6 +51,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     image11 = changeImageSize(1280, 720, image)
     image1 = image11.filter(ImageFilter.BoxBlur(10))
     image2 = Image.blend(image1,black,0.6)
+    name_font = ImageFont.truetype("resource/font.ttf", 30)
 
     # Cropping circle from thumbnail
     image3 = image11.crop((280,0,1000,720))
@@ -81,9 +82,9 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     image4.text((670, 332), text=title1[1], fill="white", font = font3, align ="left") 
 
     # bot_name
-    botname = f"{BOT_NAME}"
+    title = f"{BOT_NAME}"
 
-    image.text((5, 5), text=botname, fill="white", font = font4)
+    image4.text((5, 5), text=botname, fill="white", font=name_font, width=32)
 
     # description
     views = f"Views : {views}"
