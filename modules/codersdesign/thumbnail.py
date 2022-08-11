@@ -89,12 +89,12 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     image4.text((5, 5), text=botname, fill="white", font=name_font, width=32)
 
     # description
-    nowplayingon = "Now Playing"
-    views = f"Views : {views}"
-    duration = f"Duration : {duration} minutes"
-    channel = f"Request : {requested_by}"
+    nowplayingon = "𝙽𝚘𝚠 𝙿𝚕𝚊𝚢𝚒𝚗𝚐"
+    views = f"𝚅𝙸𝙴𝚆𝚂 : {views}"
+    duration = f"𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽 : {duration} 𝙼𝚒𝚗𝚞𝚝𝚎𝚜"
+    channel = f"𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝙴𝙳 𝙱𝚈 : {requested_by}"
      
-    image4.text((670, 170), text=nowplayingon, fill="white", font = font5, stroke_width=2, stroke_fill="white") 
+    image4.text((680, 170), text=nowplayingon, fill="white", font = font5, stroke_width=2, stroke_fill="white") 
     image4.text((670, 410), text=views, fill="white", font = font4, align ="left", stroke_width=1, stroke_fill="red") 
     image4.text((670, 460), text=duration, fill="white", font = font4, align ="left", stroke_width=1, stroke_fill="pink") 
     image4.text((670, 510), text=channel, fill="white", font = font4, align ="left", stroke_width=1, stroke_fill="blue")
