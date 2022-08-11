@@ -3,7 +3,7 @@
 from modules.cache.admins import admins
 from modules.clientbot import call_py, bot
 from pyrogram import Client, filters
-from modules.codersdesign.thumbnail import get
+from modules.codersdesign.thumbnail import generate_cover
 from modules.clientbot.queues import QUEUE, clear_queue
 from modules.helpers.filters import other_filters
 from modules.helpers.command import commandpro as command
@@ -56,7 +56,7 @@ async def skip(c: Client, m: Message):
             thumbnail = f"{IMG_5}"
             title = f"{op[0]}"
             userid = m.from_user.id
-            image = await get(thumbnail, allow_redirects=True)
+            image = await generate_cover(thumbnail, allow_redirects=True)
             await c.send_photo(
                 chat_id,
                 photo=image,
