@@ -37,12 +37,8 @@ async def ytdl(link: str):
         return 1, stdout
     return 0, stderr
 
-if audio:
-        if round(audio.duration / 60) > DURATION_LIMIT:
-            raise DurationLimitError(
-                f"💡 Videos longer than {DURATION_LIMIT} minutes aren't allowed to play!"
-            )
-
+#plus
+useer = "NaN"
 
 @Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 async def play(c: Client, m: Message):
@@ -123,7 +119,20 @@ async def play(c: Client, m: Message):
                     duration = replied.voice.duration
             except BaseException:
                 songname = "Audio"
-            
+  
+    audio = (
+        (message.reply_to_message.audio or message.reply_to_message.voice)
+        if message.reply_to_message
+        else None
+    )
+    url = get_url(message) 
+
+    if audio:
+        if round(audio.duration / 60) > DURATION_LIMIT:
+            raise DurationLimitError(
+                f"💡 Videos longer than {DURATION_LIMIT} minutes aren't allowed to play!"
+            )
+   
             if chat_id in QUEUE:
                 title = songname
                 userid = m.from_user.id
@@ -200,11 +209,11 @@ async def play(c: Client, m: Message):
                     await suhu.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ʙᴀʙʏ...**")
                 else:
                     songname = search[0]
-                    title = search[0]
-                    url = search[1]
+                    title = results[0]["title"]
+                    url = results[0]["url"]
                     requested_by = message.from_user.first_name
-                    duration = round(audio.duration / 60)
-                    views = "Locally added"
+                    duration = results[0]["duration"]
+                    views = results[0]["views"]
                     thumbnail = search[3]
                     userid = m.from_user.id
                     image = await generate_cover(requested_by, title, views, duration, thumbnail)
@@ -225,7 +234,6 @@ async def play(c: Client, m: Message):
                 ]
             ]
         )
-                            requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=buttons,
@@ -252,9 +260,6 @@ async def play(c: Client, m: Message):
                 ]
             ]
         )
-                                requester = (
-                                    f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
-                                )
                                 await m.reply_photo(
                                     photo=image,
                                     reply_markup=buttons,
@@ -277,14 +282,14 @@ async def play(c: Client, m: Message):
                 await suhu.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ʙᴀʙʏ**")
             else:
                 songname = search[0]
-                title = search[0]
+                title = "NaN"
                 url = search[1]
                 requested_by = message.from_user.first_name
-                duration = round(audio.duration / 60)
-                views = "Locally added"
+                duration = "NaN"
+                views = "NaN"
                 thumbnail = search[3]
                 userid = m.from_user.id
-                image = await generate_cover(thumbnail, allow_redirects=True)
+                image = await generate_cover(requested_by, title, views, duration, thumbnail)
                 coders, ytlink = await ytdl(url)
                 if coders == 0:
                     await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
@@ -292,7 +297,6 @@ async def play(c: Client, m: Message):
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
                         await suhu.delete()
-                        requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                         buttons = InlineKeyboardMarkup(
             [
                 [
@@ -319,7 +323,6 @@ async def play(c: Client, m: Message):
                             )
                             add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
                             await suhu.delete()
-                            requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             buttons = InlineKeyboardMarkup(
             [
                 [
