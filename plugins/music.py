@@ -283,11 +283,11 @@ async def play(c: Client, m: Message):
             else:
                 results = YoutubeSearch(query, max_results=5).to_dict()
                 songname = search[0]
-                title = "NaN"
+                title = results[0]["title"]
                 url = search[1]
                 requested_by = m.from_user.first_name
-                duration = "NaN"
-                views = "NaN"
+                duration = results[0]["duration"]
+                views = results[0]["views"]
                 thumbnail = results[0]["thumbnails"][0]
                 userid = m.from_user.id
                 image = await generate_cover(requested_by, title, views, duration, thumbnail)
