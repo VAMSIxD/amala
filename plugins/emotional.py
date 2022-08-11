@@ -131,12 +131,10 @@ async def bot_statistic(c: Client, message: Message):
         chat_id, "❖ ᴄᴏʟʟᴇᴄᴛɪɴɢ sᴛᴀᴛs..."
     )
     served_chats = len(await get_served_chats()) 
-    served_users = len(await get_served_users()) 
     gbans_usertl = await get_gbans_count()
     tgm = f"""
 📊 ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛɪsᴛɪᴄ ᴏғ [{name}](https://t.me/{uname})`:`
 ➥ **ɢʀᴏᴜᴘs ᴄʜᴀᴛ** : `{served_chats}`
-➥ **ᴜsᴇʀs ᴅɪᴀʟᴏɢ** : `{served_users}`
 ➥ **ɢʙᴀɴɴᴇᴅ ᴜsᴇʀs** : `{gbans_usertl}`
 ➥ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `{pyver}`
 ➥ **ᴘʏᴛɢᴄᴀʟʟs ᴠᴇʀsɪᴏɴ** : `{pytgver.__version__}`
