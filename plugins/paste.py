@@ -2,18 +2,25 @@ import requests
 from modules import app
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from gpytranslate import Translator
-from pyrogram.errors import PeerIdInvalid
-from pyrogram.types import Message, User
-from datetime import datetime
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from aiohttp import ClientSession
-import os
-import re
-import aiofiles
-from telegraph import upload_file
-from io import BytesIO
-from traceback import format_exc
+
+session = ClientSession()
+pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
+BASE = "https://batbin.me/"
+
+async def post(url: str, *args, **kwargs):
+    async with session.post(url, *args, **kwargs) as resp:
+        try:
+            data = await resp.json()
+        except Exception:
+            data = await resp.text()
+    return data
+
+async def paste(content: str):
+    resp = await post(f"{BASE}api/v2/paste", data=content)
+    if not resp["success"]:
+        return
+    return BASE + resp["message"]
 
 @app.on_message(filters.command("paste") & ~filters.edited)
 async def paste_func(client: Client, message: Message):
