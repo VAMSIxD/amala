@@ -345,5 +345,5 @@ async def play(c: Client, m: Message):
                             os.remove("final.png")
                         except Exception:
                             pass
-                        return await lel.delete()
+                        return await loser.delete()
 
