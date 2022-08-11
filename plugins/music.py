@@ -206,6 +206,8 @@ async def play(c: Client, m: Message):
                 if search == 0:
                     await suhu.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ʙᴀʙʏ...**")
                 else:
+                    results = YoutubeSearch(url, max_results=1).to_dict()
+                    # print results
                     songname = search[0]
                     title = results[0]["title"]
                     url = results[0]["url"]
@@ -279,6 +281,7 @@ async def play(c: Client, m: Message):
             if search == 0:
                 await suhu.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ʙᴀʙʏ**")
             else:
+                results = YoutubeSearch(query, max_results=5).to_dict()
                 songname = search[0]
                 title = "NaN"
                 url = search[1]
