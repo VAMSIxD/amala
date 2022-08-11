@@ -1,6 +1,19 @@
+import requests
 from modules import app
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from gpytranslate import Translator
+from pyrogram.errors import PeerIdInvalid
+from pyrogram.types import Message, User
+from datetime import datetime
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from aiohttp import ClientSession
+import os
+import re
+import aiofiles
+from telegraph import upload_file
+from io import BytesIO
+from traceback import format_exc
 
 @app.on_message(filters.command("paste") & ~filters.edited)
 async def paste_func(client: Client, message: Message):
