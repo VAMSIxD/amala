@@ -150,7 +150,7 @@ async def vplay(c: Client, m: Message):
     )
     url = get_url(message)
 
-   if audio:
+    if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
                 f"💡 Videos longer than {DURATION_LIMIT} minutes aren't allowed to play!"
