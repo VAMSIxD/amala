@@ -143,6 +143,19 @@ async def vplay(c: Client, m: Message):
             except BaseException:
                 songname = "Video"
 
+    audio = (
+        (message.reply_to_message.audio or message.reply_to_message.voice)
+        if message.reply_to_message
+        else None
+    )
+    url = get_url(message)
+
+   if audio:
+        if round(audio.duration / 60) > DURATION_LIMIT:
+            raise DurationLimitError(
+                f"💡 Videos longer than {DURATION_LIMIT} minutes aren't allowed to play!"
+            )
+
             if chat_id in QUEUE:
                 title = songname
                 userid = m.from_user.id
@@ -167,12 +180,12 @@ async def vplay(c: Client, m: Message):
                     caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷 ...**",
                 )
             else:
-                title = songname
+                title = results[0]["title"]
                 userid = m.from_user.id
                 requested_by = message.from_user.first_name
-                duration = round(audio.duration / 60)
-                views = "Locally added"
-                thumbnail = f"{IMG_5}"
+                duration = results[0]["duration"]
+                views = results[0]["views"]
+                thumbnail = results[0]["thumbnails"][0]
                 image = await generate_cover(requested_by, title, views, duration, thumbnail)
                 if Q == 720:
                     amaze = HighQualityVideo()
@@ -221,11 +234,11 @@ async def vplay(c: Client, m: Message):
                     await loser.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ʙᴀʙʏ**")
                 else:
                     songname = search[0]
-                    title = search[0]
+                    title = "NaN"
                     url = search[1]
                     requested_by = message.from_user.first_name
-                    duration = round(audio.duration / 60)
-                    views = "Locally added"
+                    duration = "NaN"
+                    views = "NaN"
                     thumbnail = search[3]
                     userid = m.from_user.id
                     image = await generate_cover(requested_by, title, views, duration, thumbnail)
@@ -298,12 +311,12 @@ async def vplay(c: Client, m: Message):
                 await loser.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ʙᴀʙʏ**")
             else:
                 songname = search[0]
-                title = search[0]
+                title = results[0]["title"]
                 url = search[1]
                 requested_by = message.from_user.first_name
-                duration = round(audio.duration / 60)
-                views = "Locally added"
-                thumbnail = search[3]
+                duration = results[0]["duration"]
+                views = results[0]["views"]
+                thumbnail = results[0]["thumbnails"][0]
                 userid = m.from_user.id
                 image = await generate_cover(requested_by, title, views, duration, thumbnail)
                 coders, ytlink = await ytdl(url)
