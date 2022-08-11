@@ -1,5 +1,5 @@
 # telugucoders
-# thanks to yukki
+# thanks to @teamyukki
 
 import os
 import aiofiles
@@ -74,6 +74,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     font2 = ImageFont.truetype(r'resource/robot.otf', 60)
     font3 = ImageFont.truetype(r'resource/robot.otf', 49)
     font4 = ImageFont.truetype(r'resource/Mukta-ExtraBold.ttf', 35)
+    font5 = ImageFont.truetype(r'resource/font2.ttf', 70)
 
     image4 = ImageDraw.Draw(image2)
 
@@ -88,10 +89,12 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     image4.text((5, 5), text=botname, fill="white", font=name_font, width=32)
 
     # description
+    nowplayingon = "Now Playing"
     views = f"Views : {views}"
     duration = f"Duration : {duration} minutes"
     channel = f"Request : {BOT_NAME}"
-
+     
+    image4.text((600, 150), text=nowplayingon, fill="white", font = font5, stroke_width=2, stroke_fill="white") 
     image4.text((670, 410), text=views, fill="white", font = font4, align ="left") 
     image4.text((670, 460), text=duration, fill="white", font = font4, align ="left") 
     image4.text((670, 510), text=channel, fill="white", font = font4, align ="left")
