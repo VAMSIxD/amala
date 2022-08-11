@@ -37,6 +37,12 @@ async def ytdl(link: str):
         return 1, stdout
     return 0, stderr
 
+if audio:
+        if round(audio.duration / 60) > DURATION_LIMIT:
+            raise DurationLimitError(
+                f"💡 Videos longer than {DURATION_LIMIT} minutes aren't allowed to play!"
+            )
+
 
 @Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 async def play(c: Client, m: Message):
@@ -121,8 +127,11 @@ async def play(c: Client, m: Message):
             if chat_id in QUEUE:
                 title = songname
                 userid = m.from_user.id
+                requested_by = message.from_user.first_name
+                duration = round(audio.duration / 60)
+                views = "Locally added"
                 thumbnail = f"{IMG_5}"
-                image = await generate_cover(thumbnail, allow_redirects=True)
+                image = await generate_cover(requested_by, title, views, duration, thumbnail)
                 pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 buttons = InlineKeyboardMarkup(
@@ -143,8 +152,11 @@ async def play(c: Client, m: Message):
                 try:
                     title = songname
                     userid = m.from_user.id
+                    requested_by = message.from_user.first_name
+                    duration = round(audio.duration / 60)
+                    views = "Locally added"
                     thumbnail = f"{IMG_5}"
-                    image = await generate_cover(thumbnail, allow_redirects=True)
+                    image = await generate_cover(requested_by, title, views, duration, thumbnail)
                     await suhu.edit("🌹**ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
                     await call_py.join_group_call(
                         chat_id,
