@@ -214,7 +214,7 @@ async def play(c: Client, m: Message):
                     requested_by = message.from_user.first_name
                     duration = results[0]["duration"]
                     views = results[0]["views"]
-                    thumbnail = search[3]
+                    thumbnail = results[0]["thumbnails"][0]
                     userid = m.from_user.id
                     image = await generate_cover(requested_by, title, views, duration, thumbnail)
                     coders, ytlink = await ytdl(url)
@@ -287,7 +287,7 @@ async def play(c: Client, m: Message):
                 requested_by = message.from_user.first_name
                 duration = "NaN"
                 views = "NaN"
-                thumbnail = search[3]
+                thumbnail = results[0]["thumbnails"][0]
                 userid = m.from_user.id
                 image = await generate_cover(requested_by, title, views, duration, thumbnail)
                 coders, ytlink = await ytdl(url)
