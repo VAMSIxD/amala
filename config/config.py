@@ -26,10 +26,11 @@ OWNER_ID = list(
 
 MONGODB_URL = getenv("MONGODB_URL")
 
-#________________________ Updates 🍃 _______________________________
+#________________________ Updates 🍃 & Music bot name_______________________________
 
 NETWORK = getenv("NETWORK")
 GROUP = getenv("GROUP")
+BOT_NAME = getenv("BOT_NAME")
 
 #************************* Image Stuff 💕 **************************
 
