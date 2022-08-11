@@ -120,10 +120,10 @@ async def play(c: Client, m: Message):
             except BaseException:
                 songname = "Audio"
     
-    await message.delete()
+    await m.delete()
     audio = (
-        (message.reply_to_message.audio or message.reply_to_message.voice)
-        if message.reply_to_message
+        (m.reply_to_message.audio or m.reply_to_message.voice)
+        if m.reply_to_message
         else None
     )
     url = get_url(message) 
