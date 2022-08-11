@@ -6,9 +6,8 @@ from PIL import ImageGrab
 from modules.clientbot.clientbot import me_bot
 from typing import Callable
 from os import path
+from config import BOT_NAME
 
-
-BOT_NAME = me_bot.first_name
 
 def truncate(text):
     list = text.split(" ")
@@ -79,10 +78,12 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     image4.text((670, 280), text=title1[0], fill="white", font = font3, align ="left") 
     image4.text((670, 332), text=title1[1], fill="white", font = font3, align ="left") 
 
+    # bot_name
+    image.text((5, 5), f"{BOT_NAME}", fill="white", font = font4)
     # description
     views = f"Views : {views}"
     duration = f"Duration : {duration} minutes"
-    channel = f"Request : {BOT_NAME} Bot"
+    channel = f"Request : {BOT_NAME}"
 
     image4.text((670, 410), text=views, fill="white", font = font4, align ="left") 
     image4.text((670, 460), text=duration, fill="white", font = font4, align ="left") 
