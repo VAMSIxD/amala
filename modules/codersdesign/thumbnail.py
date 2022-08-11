@@ -1,8 +1,12 @@
 import os
 import aiofiles
 import aiohttp
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageFont, ImageDraw, ImageFilter
+from PIL import ImageGrab
 from modules.clientbot.clientbot import me_bot
+from typing import Callable
+from os import path
+from typing import Union
 
 BOT_NAME = me_bot.first_name
 
