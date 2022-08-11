@@ -142,7 +142,8 @@ async def vplay(c: Client, m: Message):
                     duration = replied.document.duration
             except BaseException:
                 songname = "Video"
-
+  
+    await message.delete()
     audio = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
