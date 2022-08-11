@@ -146,11 +146,13 @@ async def vplay(c: Client, m: Message):
             if chat_id in QUEUE:
                 title = songname
                 userid = m.from_user.id
+                requested_by = message.from_user.first_name
+                duration = round(audio.duration / 60)
+                views = "Locally added"
                 thumbnail = f"{IMG_5}"
-                image = await generate_cover(thumbnail, allow_redirects=True)
+                image = await generate_cover(requested_by, title, views, duration, thumbnail)
                 pos = add_to_queue(chat_id, songname, dl, link, "Video", Q)
                 await loser.delete()
-                requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 buttons = InlineKeyboardMarkup(
             [
                 [
@@ -167,8 +169,11 @@ async def vplay(c: Client, m: Message):
             else:
                 title = songname
                 userid = m.from_user.id
+                requested_by = message.from_user.first_name
+                duration = round(audio.duration / 60)
+                views = "Locally added"
                 thumbnail = f"{IMG_5}"
-                image = await generate_cover(thumbnail, allow_redirects=True)
+                image = await generate_cover(requested_by, title, views, duration, thumbnail)
                 if Q == 720:
                     amaze = HighQualityVideo()
                 elif Q == 480:
@@ -218,10 +223,12 @@ async def vplay(c: Client, m: Message):
                     songname = search[0]
                     title = search[0]
                     url = search[1]
-                    duration = search[2]
+                    requested_by = message.from_user.first_name
+                    duration = round(audio.duration / 60)
+                    views = "Locally added"
                     thumbnail = search[3]
                     userid = m.from_user.id
-                    image = await generate_cover(thumbnail, allow_redirects=True)
+                    image = await generate_cover(requested_by, title, views, duration, thumbnail)
                     coders, ytlink = await ytdl(url)
                     if coders == 0:
                         await loser.edit(f"❌ ʏᴛ-ᴅʟ ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ\n\n» `{ytlink}`")
@@ -259,7 +266,6 @@ async def vplay(c: Client, m: Message):
                                 )
                                 add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                                 await loser.delete()
-                                requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 buttons = InlineKeyboardMarkup(
             [
                 [
@@ -294,10 +300,12 @@ async def vplay(c: Client, m: Message):
                 songname = search[0]
                 title = search[0]
                 url = search[1]
-                duration = search[2]
+                requested_by = message.from_user.first_name
+                duration = round(audio.duration / 60)
+                views = "Locally added"
                 thumbnail = search[3]
                 userid = m.from_user.id
-                image = await generate_cover(thumbnail, allow_redirects=True)
+                image = await generate_cover(requested_by, title, views, duration, thumbnail)
                 coders, ytlink = await ytdl(url)
                 if coders == 0:
                     await loser.edit(f"❌ ʏᴛ-ᴅʟ ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ\n\n» `{ytlink}`")
@@ -335,7 +343,6 @@ async def vplay(c: Client, m: Message):
                             )
                             add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                             await loser.delete()
-                            requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             buttons = InlineKeyboardMarkup(
             [
                 [
