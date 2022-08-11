@@ -186,6 +186,8 @@ async def vplay(c: Client, m: Message):
                     caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷 ...**",
                 )
             else:
+                results = YoutubeSearch(url, max_results=1).to_dict()
+                # print results
                 title = results[0]["title"]
                 userid = m.from_user.id
                 requested_by = m.from_user.first_name
@@ -314,6 +316,8 @@ async def vplay(c: Client, m: Message):
             if search == 0:
                 await loser.edit("**sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ʙᴀʙʏ**")
             else:
+                results = YoutubeSearch(query, max_results=5).to_dict()
+                # print results
                 songname = search[0]
                 title = results[0]["title"]
                 url = search[1]
