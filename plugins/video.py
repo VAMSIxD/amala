@@ -344,7 +344,7 @@ async def vplay(c: Client, m: Message):
             ]
         )
                         await m.reply_photo(
-                            photo=image,
+                            photo="final.png",
                             reply_markup=buttons,
                             caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷 ...**",
                         )
@@ -371,7 +371,7 @@ async def vplay(c: Client, m: Message):
             ]
         )
                             await m.reply_photo(
-                                photo=image,
+                                photo="final.png",
                                 reply_markup=buttons,
                                 caption=f"**ᴀᴍᴀʟᴀ ʀᴏʙᴏᴛ ᴠɪᴅᴇᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
                             )
