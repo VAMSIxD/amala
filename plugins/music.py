@@ -119,7 +119,8 @@ async def play(c: Client, m: Message):
                     duration = replied.voice.duration
             except BaseException:
                 songname = "Audio"
-  
+    
+    await message.delete()
     audio = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
