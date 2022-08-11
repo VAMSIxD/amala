@@ -56,7 +56,7 @@ async def skip(c: Client, m: Message):
             thumbnail = f"{IMG_5}"
             title = f"{op[0]}"
             userid = m.from_user.id
-            image = await generate_cover(thumbnail, allow_redirects=True)
+            image = await generate_cover(requested_by, title, views, duration, thumbnail)
             await c.send_photo(
                 chat_id,
                 photo=image,
