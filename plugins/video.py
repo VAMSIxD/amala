@@ -154,7 +154,7 @@ async def vplay(c: Client, m: Message):
         if m.reply_to_message
         else None
     )
-    url = get_url(message)
+    url = get_url(m)
 
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
@@ -165,7 +165,7 @@ async def vplay(c: Client, m: Message):
             if chat_id in QUEUE:
                 title = songname
                 userid = m.from_user.id
-                requested_by = message.from_user.first_name
+                requested_by = m.from_user.first_name
                 duration = round(audio.duration / 60)
                 views = "Locally added"
                 thumbnail = f"{IMG_5}"
@@ -188,7 +188,7 @@ async def vplay(c: Client, m: Message):
             else:
                 title = results[0]["title"]
                 userid = m.from_user.id
-                requested_by = message.from_user.first_name
+                requested_by = m.from_user.first_name
                 duration = results[0]["duration"]
                 views = results[0]["views"]
                 thumbnail = results[0]["thumbnails"][0]
@@ -211,7 +211,6 @@ async def vplay(c: Client, m: Message):
                 )
                 add_to_queue(chat_id, songname, dl, link, "Video", Q)
                 await loser.delete()
-                requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 buttons = InlineKeyboardMarkup(
             [
                 [
@@ -242,7 +241,7 @@ async def vplay(c: Client, m: Message):
                     songname = search[0]
                     title = "NaN"
                     url = search[1]
-                    requested_by = message.from_user.first_name
+                    requested_by = m.from_user.first_name
                     duration = "NaN"
                     views = "NaN"
                     thumbnail = search[3]
@@ -257,7 +256,6 @@ async def vplay(c: Client, m: Message):
                                 chat_id, songname, ytlink, url, "Video", Q
                             )
                             await loser.delete()
-                            requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             buttons = InlineKeyboardMarkup(
             [
                 [
@@ -319,7 +317,7 @@ async def vplay(c: Client, m: Message):
                 songname = search[0]
                 title = results[0]["title"]
                 url = search[1]
-                requested_by = message.from_user.first_name
+                requested_by = m.from_user.first_name
                 duration = results[0]["duration"]
                 views = results[0]["views"]
                 thumbnail = results[0]["thumbnails"][0]
@@ -332,9 +330,6 @@ async def vplay(c: Client, m: Message):
                     if chat_id in QUEUE:
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                         await loser.delete()
-                        requester = (
-                            f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
-                        )
                         buttons = InlineKeyboardMarkup(
             [
                 [
