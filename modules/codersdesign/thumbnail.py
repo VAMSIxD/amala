@@ -94,10 +94,10 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     duration = f"Duration : {duration} minutes"
     channel = f"Request : {BOT_NAME}"
      
-    image4.text((600, 280), text=nowplayingon, fill="white", font = font5, stroke_width=2, stroke_fill="white") 
-    image4.text((670, 410), text=views, fill="white", font = font4, align ="left", stroke_width=2, stroke_fill="red") 
-    image4.text((670, 460), text=duration, fill="white", font = font4, align ="left", stroke_width=2, stroke_fill="pink") 
-    image4.text((670, 510), text=channel, fill="white", font = font4, align ="left", stroke_width=2, stroke_fill="yellow")
+    image4.text((600, 170), text=nowplayingon, fill="white", font = font5, stroke_width=2, stroke_fill="white") 
+    image4.text((670, 410), text=views, fill="white", font = font4, align ="left", stroke_width=1, stroke_fill="red") 
+    image4.text((670, 460), text=duration, fill="white", font = font4, align ="left", stroke_width=1, stroke_fill="pink") 
+    image4.text((670, 510), text=channel, fill="white", font = font4, align ="left", stroke_width=1, stroke_fill="yellow")
 
     
     image2.save(f"final.png")
