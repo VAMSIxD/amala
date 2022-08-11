@@ -154,7 +154,7 @@ async def play(c: Client, m: Message):
         )
                 await suhu.delete()
                 await m.reply_photo(
-                    photo=image,
+                    photo="final.png",
                     reply_markup=buttons,
                     caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷 ...**",
                 )
@@ -187,7 +187,7 @@ async def play(c: Client, m: Message):
             ]
         )
                     await m.reply_photo(
-                        photo=image,
+                        photo="final.png",
                         reply_markup=buttons,
                         caption=f"**🍃ᴀᴍᴀʟᴀ ʀᴏʙᴏᴛ ᴀᴜᴅɪᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ....**",
                     )
@@ -235,7 +235,7 @@ async def play(c: Client, m: Message):
             ]
         )
                             await m.reply_photo(
-                                photo=image,
+                                photo="final.png",
                                 reply_markup=buttons,
                                 caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷...**",
                             )
@@ -261,7 +261,7 @@ async def play(c: Client, m: Message):
             ]
         )
                                 await m.reply_photo(
-                                    photo=image,
+                                    photo="final.png",
                                     reply_markup=buttons,
                                     caption=f"**🍃ᴀᴍᴀʟᴀ ʀᴏʙᴏᴛ ᴀᴜᴅɪᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
                                 )
@@ -307,7 +307,7 @@ async def play(c: Client, m: Message):
             ]
         )
                         await m.reply_photo(
-                            photo=image,
+                            photo="final.png",
                             reply_markup=buttons,
                             caption=f"**🍀ɴᴇxᴛ sᴏɴɢ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ ɪɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs sᴇʀᴠᴇʀ... `{pos}` 🌷 ...**",
                         )
@@ -333,7 +333,7 @@ async def play(c: Client, m: Message):
             ]
         )
                             await m.reply_photo(
-                                photo=image,
+                                photo="final.png",
                                 reply_markup=buttons,
                                 caption=f"**🍃ᴀᴍᴀʟᴀ ʀᴏʙᴏᴛ ᴀᴜᴅɪᴏ ᴘʟᴀʏɪɴɢ ᴏɴ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴘʀɪᴠᴀᴛᴇ sᴇʀᴠᴇʀ ...**",
                             )
