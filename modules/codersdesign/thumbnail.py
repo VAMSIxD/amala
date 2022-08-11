@@ -11,7 +11,6 @@ from typing import Callable
 from os import path
 from config import BOT_NAME
 
-REQUEST_BY = {message.from_user.mention()}
 
 def truncate(text):
     list = text.split(" ")
@@ -93,7 +92,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     nowplayingon = "Now Playing"
     views = f"Views : {views}"
     duration = f"Duration : {duration} minutes"
-    channel = f"Request : {REQUEST_BY}"
+    channel = f"Request : {requested_by}"
      
     image4.text((670, 170), text=nowplayingon, fill="white", font = font5, stroke_width=2, stroke_fill="white") 
     image4.text((670, 410), text=views, fill="white", font = font4, align ="left", stroke_width=1, stroke_fill="red") 
