@@ -52,6 +52,9 @@ async def ytdl(link):
     else:
         return 0, stderr.decode()
 
+#plus
+useer = "NaN"
+
 
 @Client.on_message(command("vplay") & filters.group & ~filters.edited)
 async def vplay(c: Client, m: Message):
@@ -143,10 +146,10 @@ async def vplay(c: Client, m: Message):
             except BaseException:
                 songname = "Video"
   
-    await message.delete()
+    await m.delete()
     audio = (
-        (message.reply_to_message.audio or message.reply_to_message.voice)
-        if message.reply_to_message
+        (m.reply_to_message.audio or m.reply_to_message.voice)
+        if m.reply_to_message
         else None
     )
     url = get_url(message)
