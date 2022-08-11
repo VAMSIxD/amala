@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import AudioPiped
 from pytgcalls.types.input_stream.quality import HighQualityAudio
-from modules.codersdesign.thumbnail import get
+from modules.codersdesign.thumbnail import generate_cover
 from modules.helpers.filters import command, other_filters
 from modules.clientbot.queues import QUEUE, add_to_queue
 from modules.clientbot import call_py, user
@@ -122,7 +122,7 @@ async def play(c: Client, m: Message):
                 title = songname
                 userid = m.from_user.id
                 thumbnail = f"{IMG_5}"
-                image = await get(thumbnail, allow_redirects=True)
+                image = await generate_cover(thumbnail, allow_redirects=True)
                 pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 buttons = InlineKeyboardMarkup(
@@ -144,7 +144,7 @@ async def play(c: Client, m: Message):
                     title = songname
                     userid = m.from_user.id
                     thumbnail = f"{IMG_5}"
-                    image = await get(thumbnail, allow_redirects=True)
+                    image = await generate_cover(thumbnail, allow_redirects=True)
                     await suhu.edit("🌹**ʏᴏᴜʀ sᴏɴɢ ɪs ᴘʀᴏᴄᴇssɪɴɢ ᴏɴ ᴍʏ sᴇʀᴠᴇʀ**")
                     await call_py.join_group_call(
                         chat_id,
@@ -193,7 +193,7 @@ async def play(c: Client, m: Message):
                     duration = search[2]
                     thumbnail = search[3]
                     userid = m.from_user.id
-                    image = await get(thumbnail, allow_redirects=True)
+                    image = await generate_cover(thumbnail, allow_redirects=True)
                     coders, ytlink = await ytdl(url)
                     if coders == 0:
                         await suhu.edit(f"❌ ʏᴛ-ᴅʟ ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ\n\n» `{ytlink}`")
@@ -268,7 +268,7 @@ async def play(c: Client, m: Message):
                 duration = search[2]
                 thumbnail = search[3]
                 userid = m.from_user.id
-                image = await get(thumbnail, allow_redirects=True)
+                image = await generate_cover(thumbnail, allow_redirects=True)
                 coders, ytlink = await ytdl(url)
                 if coders == 0:
                     await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
