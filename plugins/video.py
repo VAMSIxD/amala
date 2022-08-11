@@ -10,6 +10,7 @@ from modules.helpers.filters import command, other_filters
 from modules.clientbot.queues import QUEUE, add_to_queue
 from modules.clientbot import call_py, user
 from modules.helpers.gets import get_url, get_file_name
+from youtube_search import YoutubeSearch
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
