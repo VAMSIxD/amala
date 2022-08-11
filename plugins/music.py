@@ -14,7 +14,7 @@ from modules.clientbot.utils import bash
 from modules.helpers.gets import get_url, get_file_name
 from config import BOT_USERNAME, IMG_5, DURATION_LIMIT
 from youtubesearchpython import VideosSearch
-
+from youtube_search import YoutubeSearch
 
 def ytsearch(query: str):
     try:
