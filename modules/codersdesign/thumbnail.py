@@ -24,8 +24,8 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 await f.close()
 
     image = Image.open(f"./background.png")
-    black = Image.open("resources/black.jpg")
-    img = Image.open("resources/robot.png")
+    black = Image.open("resource/black.jpg")
+    img = Image.open("resource/robot.png")
     image5 = changeImageSize(1280, 720, img)
     image1 = changeImageSize(1280, 720, image)
     image1 = image1.filter(ImageFilter.BoxBlur(10))
@@ -33,7 +33,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     image1 = image11.filter(ImageFilter.BoxBlur(10))
     image2 = Image.blend(image1,black,0.6)
 
-    # Cropping circle from thubnail
+    # Cropping circle from thumbnail
     image3 = image11.crop((280,0,1000,720))
     #lum_img = Image.new('L', [720,720] , 0)
    # draw = ImageDraw.Draw(lum_img)
@@ -49,10 +49,10 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     image2.paste(image5, mask = image5)
 
     # fonts
-    font1 = ImageFont.truetype(r'resources/robot.otf', 30)
-    font2 = ImageFont.truetype(r'resources/robot.otf', 60)
-    font3 = ImageFont.truetype(r'resources/robot.otf', 49)
-    font4 = ImageFont.truetype(r'resources/Mukta-ExtraBold.ttf', 35)
+    font1 = ImageFont.truetype(r'resource/robot.otf', 30)
+    font2 = ImageFont.truetype(r'resource/robot.otf', 60)
+    font3 = ImageFont.truetype(r'resource/robot.otf', 49)
+    font4 = ImageFont.truetype(r'resource/Mukta-ExtraBold.ttf', 35)
 
     image4 = ImageDraw.Draw(image2)
 
