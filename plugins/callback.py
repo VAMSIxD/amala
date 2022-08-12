@@ -17,7 +17,8 @@ from config import GROUP, NETWORK, BOT_USERNAME
 @Client.on_callback_query(filters.regex("home_start"))
 async def home_start(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""👋🏻 **ʜᴇʟʟᴏ ɪᴀᴍ ᴀ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴍᴜsɪᴄ ʙᴏᴛ ɪ ᴄᴀɴ ᴘʟᴀʏ sᴏɴɢs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘs.\n**
+        f"""👋🏻 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 
+
 ________________________
 ➠ ɴᴏ ʟᴀɢ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ. 
 ➠ ɪᴡɪʟʟ ᴘʟᴀʏ sᴏɴɢs sᴍᴏᴏᴛʜʟʏ ᴀɴᴅ sᴏғᴛʟʏ. 
