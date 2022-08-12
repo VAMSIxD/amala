@@ -17,14 +17,15 @@ from config import GROUP, NETWORK, BOT_USERNAME
 @Client.on_callback_query(filters.regex("home_start"))
 async def home_start(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""👋🏻 **ʜᴇʟʟᴏ ɪᴀᴍ ᴀ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴍᴜsɪᴄ ʙᴏᴛ ɪ ᴄᴀɴ ᴘʟᴀʏ sᴏɴɢs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘs.**
-**________________________
+        f"""👋🏻 **ʜᴇʟʟᴏ ɪᴀᴍ ᴀ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴍᴜsɪᴄ ʙᴏᴛ ɪ ᴄᴀɴ ᴘʟᴀʏ sᴏɴɢs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘs.\n**
+________________________
 ➠ ɴᴏ ʟᴀɢ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ. 
 ➠ ɪᴡɪʟʟ ᴘʟᴀʏ sᴏɴɢs sᴍᴏᴏᴛʜʟʏ ᴀɴᴅ sᴏғᴛʟʏ. 
 ➠ ʀᴜɴɴɪɴɢ ᴏɴ ᴠᴘs sᴇʀᴠᴇʀ. 
 ➠ ᴘʀᴏᴠɪᴅᴇᴅ ᴠɪᴅᴇᴏ sᴜᴘᴘᴏʀᴛ. 
 ➠ ᴘᴏᴡᴇʀᴇᴅ ʙʏ [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters) 
-_________________________**
+_________________________
+ᴛʜᴀɴᴋ ʏᴏᴜ ❤🌹ᴀɴʏ ɪssᴜᴇ ᴀʙᴏᴜᴛ ʙᴏᴛ ᴄᴏɴᴛᴀᴄᴋ ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀs. 
 """, 
     reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="command_list"), 
