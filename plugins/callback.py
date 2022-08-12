@@ -18,7 +18,6 @@ from config import GROUP, NETWORK, BOT_USERNAME
 async def home_start(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""👋🏻 ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 
-
 ________________________
 ➠ ɴᴏ ʟᴀɢ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ. 
 ➠ ɪᴡɪʟʟ ᴘʟᴀʏ sᴏɴɢs sᴍᴏᴏᴛʜʟʏ ᴀɴᴅ sᴏғᴛʟʏ. 
