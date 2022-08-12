@@ -52,12 +52,12 @@ async def start_(client: Client, message: Message):
 ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters)**
 """,
     reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("📚 ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="command_list"), 
+            InlineKeyboardButton("ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="command_list"), 
             ],[
-            InlineKeyboardButton("💬 ɪɴғᴏʀᴍᴀᴛɪᴏɴ", callback_data="info"), 
+            InlineKeyboardButton("ɪɴғᴏʀᴍᴀᴛɪᴏɴ", callback_data="info"), 
             ],[
-            InlineKeyboardButton("🍃 sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"), 
-            InlineKeyboardButton("📡 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{NETWORK}"), 
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"), 
+            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{NETWORK}"), 
             ],[
             InlineKeyboardButton("🍀 ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🍀", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
@@ -90,7 +90,7 @@ async def repo(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "ᴄʜᴇᴄᴋ ɴᴏᴡ✨", url="https://github.com/Telugucoders/Amalav2.0")
+                        "ᴄʜᴇᴄᴋ ɴᴏᴡ✨", url="https://github.com/TeluguCodersMusic/Amalav2.0")
                 ]
             ]
         ),
