@@ -12,7 +12,7 @@ from modules.clientbot.queues import QUEUE, add_to_queue
 from modules.clientbot import call_py, user
 from modules.clientbot.utils import bash
 from modules.helpers.gets import get_url, get_file_name
-from config import BOT_USERNAME, IMG_5, DURATION_LIMIT
+from config import BOT_USERNAME, IMG_5, DURATION_LIMIT, GROUP, NETWORK
 from youtubesearchpython import VideosSearch
 from youtube_search import YoutubeSearch
 
@@ -255,8 +255,12 @@ async def play(c: Client, m: Message):
                                 buttons = InlineKeyboardMarkup(
             [
                 [
-                        InlineKeyboardButton(
-                            "🗑 ʙɪɴ", callback_data="set_close"), 
+                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"), 
+                ],[
+                        InlineKeyboardButton("ɴᴇᴛᴡᴏʀᴋ", url=f"https://t.me/{NETWORK}"),
+                        InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"),  
+                ],[
+                        InlineKeyboardButton("🗑 ʙɪɴ", callback_data="set_close"), 
                 ]
             ]
         )
@@ -301,8 +305,12 @@ async def play(c: Client, m: Message):
                         buttons = InlineKeyboardMarkup(
             [
                 [
-                        InlineKeyboardButton(
-                            "🗑 ʙɪɴ", callback_data="set_close"), 
+                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"), 
+                ],[
+                        InlineKeyboardButton("ɴᴇᴛᴡᴏʀᴋ", url=f"https://t.me/{NETWORK}"),
+                        InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"),  
+                ],[
+                        InlineKeyboardButton("🗑 ʙɪɴ", callback_data="set_close"), 
                 ]
             ]
         )
@@ -327,6 +335,11 @@ async def play(c: Client, m: Message):
                             buttons = InlineKeyboardMarkup(
             [
                 [
+                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"), 
+                ],[
+                        InlineKeyboardButton("ɴᴇᴛᴡᴏʀᴋ", url=f"https://t.me/{NETWORK}"),
+                        InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"),  
+                ],[
                         InlineKeyboardButton(
                             "🗑 ʙɪɴ", callback_data="set_close"), 
                 ]
