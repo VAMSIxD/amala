@@ -147,6 +147,11 @@ async def play(c: Client, m: Message):
                 buttons = InlineKeyboardMarkup(
             [
                 [
+                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"), 
+                ],[
+                        InlineKeyboardButton("ɴᴇᴛᴡᴏʀᴋ", url=f"https://t.me/{NETWORK}"),
+                        InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"),  
+                ],[
                         InlineKeyboardButton(
                             "🗑 ʙɪɴ", callback_data="set_close"), 
                 ]
@@ -181,6 +186,11 @@ async def play(c: Client, m: Message):
                     buttons = InlineKeyboardMarkup(
             [
                 [
+                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"), 
+                ],[
+                        InlineKeyboardButton("ɴᴇᴛᴡᴏʀᴋ", url=f"https://t.me/{NETWORK}"),
+                        InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"),  
+                ],[
                         InlineKeyboardButton(
                             "🗑 ʙɪɴ", callback_data="set_close"), 
                 ]
@@ -229,6 +239,11 @@ async def play(c: Client, m: Message):
                             buttons = InlineKeyboardMarkup(
             [
                 [
+                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"), 
+                ],[
+                        InlineKeyboardButton("ɴᴇᴛᴡᴏʀᴋ", url=f"https://t.me/{NETWORK}"),
+                        InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"),  
+                ],[
                         InlineKeyboardButton(
                             "🗑 ʙɪɴ", callback_data="set_close"), 
                 ]
