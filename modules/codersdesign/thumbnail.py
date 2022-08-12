@@ -80,8 +80,8 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
     # title
     title1 = truncate(title)
-    image4.text((670, 280), text=title1[0], fill="white", font = font3, align ="left") 
-    image4.text((670, 332), text=title1[1], fill="white", font = font3, align ="left") 
+    image4.text((660, 280), text=title1[0], fill="white", font = font3, align ="left") 
+    image4.text((660, 332), text=title1[1], fill="white", font = font3, align ="left") 
 
     # bot_name
     botname = f"{BOT_NAME}"
