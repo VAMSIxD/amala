@@ -17,19 +17,19 @@ from config import GROUP, NETWORK, BOT_USERNAME
 @Client.on_callback_query(filters.regex("home_start"))
 async def start_set(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""👋🏻 **ʜᴇʟʟᴏ {query.message.from_user.mention()} ɪᴀᴍ ᴀ ᴛᴇᴀᴍ sʜᴀᴅᴏᴡ ᴍᴜsɪᴄ ʙᴏᴛ ɪᴀᴍ ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ.. 
-
-ɢʀᴏᴜᴘs ᴡɪᴛʜ sᴏᴍᴇ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.. ᴀɴʏ ʜᴇʟᴘ ʏᴏᴜ ᴡᴀɴᴛ ʜɪᴛ ᴛʜᴇ ʜᴇʟᴘ ᴄᴏᴍᴍᴀɴᴅ /help..
-
-ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters) !**
-""", 
+        f"""👋🏻 **ʜᴇʟʟᴏ ɪᴀᴍ ᴀ ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs ᴍᴜsɪᴄ ʙᴏᴛ ɪ ᴄᴀɴ ᴘʟᴀʏ sᴏɴɢs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘs\n
+________________________
+➠ ɴᴏ ʟᴀɢ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ. 
+➠ ɪᴡɪʟʟ ᴘʟᴀʏ sᴏɴɢs sᴍᴏᴏᴛʜʟʏ ᴀɴᴅ sᴏғᴛʟʏ. 
+➠ ʀᴜɴɴɪɴɢ ᴏɴ ᴠᴘs sᴇʀᴠᴇʀ. 
+➠ ᴘʀᴏᴠɪᴅᴇᴅ ᴠɪᴅᴇᴏ sᴜᴘᴘᴏʀᴛ. 
+➠ ᴘᴏᴡᴇʀᴇᴅ ʙʏ [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters) 
+_________________________""", 
     reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("📚 ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="command_list"), 
+            InlineKeyboardButton("ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="command_list"), 
             ],[
-            InlineKeyboardButton("💬 ɪɴғᴏʀᴍᴀᴛɪᴏɴ", callback_data="info"), 
-            ],[
-            InlineKeyboardButton("🍃 sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"), 
-            InlineKeyboardButton("📡 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{NETWORK}"), 
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"), 
+            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{NETWORK}"), 
             ],[
             InlineKeyboardButton("🍀 ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🍀", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
@@ -47,7 +47,7 @@ async def commands_set(_, query: CallbackQuery):
 ➠ ᴛʜɪs ʙᴏᴛ ᴍᴀᴅᴇ ᴀɴᴅ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters) 
 """, 
     reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("📚ɢᴇɴᴇʀᴀʟ ᴄᴏᴍᴍᴀɴᴅs", callback_data="general_list"), 
+            InlineKeyboardButton("ɢᴇɴᴇʀᴀʟ ᴄᴏᴍᴍᴀɴᴅs", callback_data="general_list"), 
             ],[
             InlineKeyboardButton("sᴋɪᴘ", callback_data="skip_list"), 
             InlineKeyboardButton("ᴘᴀᴜsᴇ", callback_data="pause_list"), 
