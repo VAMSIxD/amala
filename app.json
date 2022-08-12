@@ -39,8 +39,16 @@
             "required": true
         },
         "MONGO_DB_URI": {
-            "description": "Get a mongodb url from https://cloud.mongodb.com . You can leave it blank if you want , bot will use Telugu coders database for you.",
+            "description": "Get a mongodb url from https://cloud.mongodb.com.",
             "required": true
+        },
+        "BOT_NAME": {
+            "description": "put your bot name here Ex: Amala music bot",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "put your ID here get from @Missrosebot Ex: 555653637",
+            "required": true 
         }
     },
     "buildpacks": [
