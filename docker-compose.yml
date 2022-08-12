@@ -13,4 +13,4 @@ services:
       BOT_USERNAME: $BOT_USERNAME
       BOT_NAME: $BOT_NAME
       OWNER_ID: $OWNER_ID
-
+      MONGO_DB_URI: $MONGO_DB_URI
