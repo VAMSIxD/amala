@@ -176,8 +176,12 @@ async def vplay(c: Client, m: Message):
                 buttons = InlineKeyboardMarkup(
             [
                 [
-                        InlineKeyboardButton(
-                            "🗑 ʙɪɴ", callback_data="set_close"), 
+                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"), 
+                ],[
+                        InlineKeyboardButton("ɴᴇᴛᴡᴏʀᴋ", url=f"https://t.me/{NETWORK}"),
+                        InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"),  
+                ],[
+                        InlineKeyboardButton("🗑 ʙɪɴ", callback_data="set_close"), 
                 ]
             ]
         )
@@ -217,8 +221,12 @@ async def vplay(c: Client, m: Message):
                 buttons = InlineKeyboardMarkup(
             [
                 [
-                        InlineKeyboardButton(
-                            "🗑 ʙɪɴ", callback_data="set_close"), 
+                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"), 
+                ],[
+                        InlineKeyboardButton("ɴᴇᴛᴡᴏʀᴋ", url=f"https://t.me/{NETWORK}"),
+                        InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"),  
+                ],[
+                        InlineKeyboardButton("🗑 ʙɪɴ", callback_data="set_close"), 
                 ]
             ]
         )
@@ -262,8 +270,12 @@ async def vplay(c: Client, m: Message):
                             buttons = InlineKeyboardMarkup(
             [
                 [
-                        InlineKeyboardButton(
-                            "🗑 ʙɪɴ", callback_data="set_close"), 
+                        InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu"), 
+                ],[
+                        InlineKeyboardButton("ɴᴇᴛᴡᴏʀᴋ", url=f"https://t.me/{NETWORK}"),
+                        InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"),  
+                ],[
+                        InlineKeyboardButton("🗑 ʙɪɴ", callback_data="set_close"), 
                 ]
             ]
         )
@@ -289,6 +301,7 @@ async def vplay(c: Client, m: Message):
                                 buttons = InlineKeyboardMarkup(
             [
                 [
+                     
                         InlineKeyboardButton(
                             "🗑 ʙɪɴ", callback_data=f"set_close"), 
                 ]
