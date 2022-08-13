@@ -21,3 +21,4 @@ PySocks
 motor
 dnspython
 speedtest-cli
+wget
