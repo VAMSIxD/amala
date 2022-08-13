@@ -20,3 +20,4 @@ pyaes
 PySocks
 motor
 dnspython
+speedtest-cli
