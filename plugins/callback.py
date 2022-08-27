@@ -25,26 +25,16 @@ async def home_start(_, query: CallbackQuery):
 ➠ ᴘᴏᴡᴇʀᴇᴅ ʙʏ [ᴛᴇʟᴜɢᴜ ᴄᴏᴅᴇʀs](https://t.me/tgshadow_fighters) 
 
 ᴛʜᴀɴᴋ ʏᴏᴜ ❤🌹ᴀɴʏ:\n\nɪssᴜᴇ ᴀʙᴏᴜᴛ ʙᴏᴛ ᴄᴏɴᴛᴀᴄᴛ ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀs.""", 
-    reply_markup=InlineKeyboardMarkup(
-        [
-                [
-                    InlineKeyboardButton(
-                        "❰𝗢𝘄𝗻𝗲𝗿❱", url="https://t.me/Tc_shadowo")
-                  ],[
-                    InlineKeyboardButton(
-                        "❰𝗦𝘂𝗽𝗽𝗼𝗿𝘁❱", url="https://t.me/telugucoders"
-                    ),
-                    InlineKeyboardButton(
-                        "❰𝗚𝗿𝗼𝘂𝗽❱", url="https://t.me/tgshadow_fighters"
-                    )
-                ],[ 
-                    InlineKeyboardButton(
-                        "❰𝗖𝗼𝗺𝗺𝗮𝗱𝘀❱", callback_data="command_list"),
-                    )]
-            ]
-        ),
-     disable_web_page_preview=True
-    )
+    reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton("ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="command_list"), 
+            ],[
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP}"), 
+            InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{NETWORK}"), 
+            ],[
+            InlineKeyboardButton("🍀 ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🍀", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+            ]]
+            ) 
+        ) 
 
    
 
